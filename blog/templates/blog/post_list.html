@@ -4,7 +4,13 @@
 	<title></title>
 </head>
 <body>
-<h> I am a fucking genius </h>
-<p> Big Data Hadoop is very fine stuff <p>
+<h1>This is HK's blog  guys </h1>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.content|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 </body>
 </html>
